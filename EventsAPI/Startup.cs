@@ -35,7 +35,7 @@ namespace EventsAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EventsAPI", Version = "v1" });
             });
                         
-            
+            //Sql lite database connection
             services.AddDbContext<DataContext>(opt =>
               {
                 opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
